@@ -9,7 +9,7 @@ function visszaKep() {
 }
 
 function kivalaszt(melyikTermek) {
-    let termekSzama = window.prompt("Hány darabot szeretne: ");
+    let termekSzama = window.prompt("Hány darabot szeretne? ");
     let kosar = document.getElementById("kosar");
     let ujElem = document.createElement("span");
     ujElem.textContent = termekSzama+" db "+" "+melyikTermek.textContent;
