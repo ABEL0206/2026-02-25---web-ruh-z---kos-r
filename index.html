@@ -11,26 +11,42 @@
 			<tr>
 				<th>Termék megnevezése</th>
 				<th>Termék képe</th>
+				<th>Termék mennyiség</th>
+				<th>Termék összege</th>
 			</tr>
 			<tr>
-				<td class="termekek" onclick="kivalaszt(this)">Kingston HyperX Predator 16GB (4x4GB) DDR4 3200MHz HX432C16PB3k4/16</td>
+				<td class="termekek">Kingston HyperX Predator 16GB (4x4GB) DDR4 3200MHz HX432C16PB3k4/16</td>
 				<td><img src="RAM.jpg" alt="" class="kiskep" onmouseleave="visszaKep()" onmouseover="nagyitKep(this.src)"></td>
+				<td><input type="number" name="ram" id="ram" value="0" oninput="arSzamitas(this)"></td>
+				<td><input type="text" name="ram" id="ramPrice" value="-"></td>
 			</tr>
 			<tr>
-				<td class="termekek" onclick="kivalaszt(this)">LG 27MP59G-P Monitor</td>
+				<td class="termekek">LG 27MP59G-P Monitor</td>
 				<td><img src="monitor.jpg" alt="" class="kiskep" onmouseleave="visszaKep()" onmouseover="nagyitKep(this.src)"></td>
+				<td><input type="number" name="monitor" id="monitor" value="0" oninput="arSzamitas(this)"></td>
+				<td><input type="text" name="monitor" id="monitorPrice" value="-"></td>
+
 			</tr>
 			<tr>
-				<td class="termekek" onclick="kivalaszt(this)">Western Digital Red 3.5" 2TB 5400rpm 64MB SATA3 WD20EFRX</td>
+				<td class="termekek">Western Digital Red 3.5" 2TB 5400rpm 64MB SATA3 WD20EFRX</td>
 				<td><img src="HDD.jpg" alt="" class="kiskep" onmouseleave="visszaKep()" onmouseover="nagyitKep(this.src)"></td>
+				<td><input type="number" name="hdd" id="hdd" value="0" oninput="arSzamitas(this)"></td>
+				<td><input type="text" name="hdd" id="hddPrice" value="-"></td>
+
 			</tr>
 			<tr>
-				<td class="termekek" onclick="kivalaszt(this)">Samsung 970 EVO 500GB M.2 PCLe MZ-V7E500BW</td>
+				<td class="termekek">Samsung 970 EVO 500GB M.2 PCLe MZ-V7E500BW</td>
 				<td><img src="SSD.jpg" alt="" class="kiskep" onmouseleave="visszaKep()" onmouseover="nagyitKep(this.src)"></td>
+				<td><input type="number" name="ssd" id="ssd" value="0" oninput="arSzamitas(this)"></td>
+				<td><input type="text" name="ssd" id="ssdPrice" value="-"></td>
+
 			</tr>
 			<tr>
-				<td class="termekek" onclick="kivalaszt(this)">Chieftec Smart 500W (GPS-500A8)</td>
+				<td class="termekek">Chieftec Smart 500W (GPS-500A8)</td>
 				<td><img src="tap.jpg" alt="" class="kiskep" onmouseleave="visszaKep()" onmouseover="nagyitKep(this.src)"></td>
+				<td><input type="number" name="psu" id="psu" value="0" oninput="arSzamitas(this)"></td>
+				<td><input type="text" name="psu" id="psuPrice" value="-"></td>
+
 			</tr>
 		</table>	
 	</div>
@@ -40,7 +56,8 @@
 	</div>
 
 	<div ID="kosar">
-		<h2>Kosár tartalma:</h2>
+		<h2>Kosár összértéke:</h2>
+		<p id="total"></p>
 	</div>	
 	<script src="kod.js"></script>
 </body>
